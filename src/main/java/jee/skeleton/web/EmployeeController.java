@@ -23,9 +23,6 @@ public class EmployeeController {
 	public @ResponseBody EmployeeForm getEmployee(ModelMap map) {
 		EmployeeForm form = new EmployeeForm();
 		List<Employee> employees = employeeService.findAllEmployee();
-		for (Employee employee : employees) {
-			System.out.println(employee.getId());
-		}
 		form.setEmployees(employees);
 		return form;
 	}
