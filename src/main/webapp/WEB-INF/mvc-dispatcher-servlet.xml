@@ -22,8 +22,9 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-	
-	<mvc:view-controller path="/" view-name="index"/>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:view-controller path="/" view-name="login"/>
+	<mvc:view-controller path="/employeeView" view-name="employeeView"/>
 </beans>
 
 
